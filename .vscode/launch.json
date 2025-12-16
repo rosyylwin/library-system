@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // this name will show up in the "Run and Debug" dropdown
+            "name": "g++ - Build and debug main file",
+            "type": "cppdbg",
+            "request": "launch",
+            // the name of the executable to be run. Should match the one generated in tasks
+            "program": "${fileDirname}/main.exe",
+            // any input parameters that would normally go on the command line go here instead
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            // must match the value for label in preLaunchTasks
+            "preLaunchTask": "C/C++: g++ build main file",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}
